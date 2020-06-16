@@ -7,8 +7,8 @@ from flask_migrate import Migrate, MigrateCommand
 
 from config import config
 
-#config_class = config['development']
-config_class = config['test']
+config_class = config['production']
+#config_class = config['test']
 app = create_app(config_class)
 migrate = Migrate(app, db)
 
